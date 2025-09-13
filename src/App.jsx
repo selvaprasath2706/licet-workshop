@@ -1,13 +1,27 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import LandingPage from "./pages/LandingPage";
 import Counter from "./components/Counter";
 import { YouTubeFeed } from "./pages/YouTubeFeed";
-import LandingPage from "./pages/LandingPage";
+import ProductListingPage from "./pages/ProductListingPage";
+
 
 function App() {
   return (
-    <>
-      <YouTubeFeed></YouTubeFeed>
-    </>
+    <Router>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <main className="container mx-auto px-4 py-8">
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/youtube-feed" element={<YouTubeFeed />} />
+             <Route path="/counter" element={<Counter />} />
+              <Route path="/products" element={<ProductListingPage />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
