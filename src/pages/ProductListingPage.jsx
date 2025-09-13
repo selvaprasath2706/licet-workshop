@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
+import { Button } from "@/components/ui/button"
 
 const ProductListingPage = () => {
      const [product,setProduct]=useState([])
@@ -14,8 +15,10 @@ const ProductListingPage = () => {
     },[])
    
 
-  return <div>ProductListingPage
-   
+  return <div className="">ProductListingPage
+   <div className="flex flex-wrap items-center gap-2 md:flex-row">
+      <Button className="text-black bg-blue-700">Button</Button>
+    </div>
    {product?
    product?.map((prod)=>{
     return (

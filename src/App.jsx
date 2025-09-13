@@ -1,11 +1,11 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
 import LandingPage from "./pages/LandingPage";
 import Counter from "./components/Counter";
 import { YouTubeFeed } from "./pages/YouTubeFeed";
 import ProductListingPage from "./pages/ProductListingPage";
-
+import { ChartPage } from "./pages/Chart";
 
 function App() {
   return (
@@ -16,8 +16,9 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/youtube-feed" element={<YouTubeFeed />} />
-             <Route path="/counter" element={<Counter />} />
-              <Route path="/products" element={<ProductListingPage />} />
+            <Route path="/counter" element={<Counter />} />
+            <Route path="/products" element={<ProductListingPage />} />
+            <Route path="/charts" element={<ChartPage />} />
           </Routes>
         </main>
       </div>
