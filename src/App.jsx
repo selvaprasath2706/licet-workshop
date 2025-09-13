@@ -18,7 +18,7 @@ function App() {
             <Route path="/youtube-feed" element={<YouTubeFeed />} />
             <Route path="/counter" element={<Counter />} />
             <Route path="/products" element={<ProductListingPage />} />
-            <Route path="/charts" element={<ChartPage />} />
+            <Route path="/charts/:id" element={<ChartPage />} />
           </Routes>
         </main>
       </div>

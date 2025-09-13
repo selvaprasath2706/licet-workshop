@@ -2,6 +2,8 @@
 import { Bar, BarChart } from "recharts"
 
 import { ChartContainer } from "@/components/ui/chart"
+import { useParams } from "react-router-dom";
+
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
@@ -24,6 +26,10 @@ const chartConfig = {
 };
 
 export function ChartPage() {
+
+  const { id } = useParams();
+  console.log("id",id)
+
   return (
     <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
       <BarChart accessibilityLayer data={chartData}>
